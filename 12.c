@@ -1,3 +1,4 @@
+//26주 적금
 #include <stdio.h>
 #define WEEK 26
 
