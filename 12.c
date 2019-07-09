@@ -1,5 +1,3 @@
-//26주 적금
-
 #include <stdio.h>
 #define WEEK 26
 
@@ -17,9 +15,12 @@ void main()
   
   for(a=1;a<=WEEK;a++)
   {
-    printf("%d주 의 저축액은 : %d 원입니다.\n",a,total);
+    
+    printf("%d주에 입금되는 금액은 %d원 입니다.\n",a,num);
+    printf("%d주의 총 저축액은 : %d 원입니다.\n\n",a,total);
     num=num+add;
     total=num+total;
+   
   }
 }
 
