@@ -19,15 +19,17 @@ int ipower(int n,int k)
 {
   int i,m;
   m=n; 
+  i=2;
   
-  printf("%d의 0 제곱 : 1\n",m);
-  printf("%d의 1 제곱 : %d\n",m,m);
+  printf("%d의 0제곱 : 1\n",m);
+  printf("%d의 1제곱 : %d\n",m,m);
   
-  for(i=0;i<k;i++)
-  {  
+ do
+ {
     n=m*n;
     a[i]=n;
     printf("%d의 %d제곱 : %d\n",m,i,a[i]);
-  }
+   i++;
+ } while(i<=k);
 }
 // ?? 어떠케하지
