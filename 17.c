@@ -22,18 +22,17 @@ int main()
 double quad_eqn(double a, double b, double c)
 {
   double root,eqn_p,eqn_m;
-  root=(b*b)-(4*a*c);
+  root=(b*b)-(4*a*c); //판별식 √b²-4ac
   root=sqrt(root);
   
-  eqn_p=(-b+root)/(2*a);
-  eqn_m=(-b-root)/(2*a);
+  eqn_p=(-b+root)/(2*a); //근의공식 +
+  eqn_m=(-b-root)/(2*a); //근의공식 -
   
-  printf("근은 %.2lf,%.2lf 입니다.",eqn_p,eqn_m);
+  if(root==0) // eqn_p==eqn_m 도 같음.
+    printf("중근입니다. 근은 %.2lf 입니다.",eqn_p);
+  else if(root>0)
+    printf("서로다른 두 실근은 %.2lf,%.2lf 입니다.",eqn_p,eqn_m);
+  else
+    printf("서로다른 두 허근입니다."); 
 }
-  
-         
-         
-         
-         
 
-           
