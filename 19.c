@@ -45,7 +45,7 @@ int main()
     printf("연산결과: %.2lf\n",mul_1);
     pritnf("곱셈은 총 %d번 실행되었습니다.\n",cnt_m);
   }
-  else if(b==/)
+  else if(b=='/')
   {
     div(a,c);
     cnt_d++;
