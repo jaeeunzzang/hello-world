@@ -20,7 +20,7 @@ int main()
   puts("연산을 입력하세요");
   puts("예: 1+2 ");
   puts("종료는 0을 눌러주세요.");
-  scanf("%lf,%c,%lf",&a,&b,&c);
+  scanf("%lf %c %lf",&a,&b,&c);
   
   
     if(b=='+')
