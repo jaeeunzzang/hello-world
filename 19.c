@@ -13,13 +13,6 @@ int cnt_a=0,cnt_s=0,cnt_m=0,cnt_d=0;
 
 int main()
 {
- 
-    title();
- 
-  
-}
-  void title(void)
-  {
     double a=0,c=0;
     char b;
     puts("계산기 프로그램");
@@ -30,7 +23,7 @@ int main()
   
     if(b=='+')
   {
-    add(a,c);
+    add_1=add(a,c);
     
     printf("연산결과 : %.2lf\n",add_1);
     printf("덧셈은 총 %d번 실행되었습니다.\n",cnt_a);
@@ -38,7 +31,7 @@ int main()
   }
   else if(b=='-')
   {
-    sub(a,c);
+    sub_1=sub(a,c);
     
     printf("연산결과: %.2lf\n",sub_1);
     printf("뺄셈은 총 %d번 실행되었습니다.\n",cnt_s);
@@ -46,7 +39,7 @@ int main()
   }
   else if(b=='*')
   {
-    mul(a,c);
+    mul_1=mul(a,c);
     
     printf("연산결과: %.2lf\n",mul_1);
     printf("곱셈은 총 %d번 실행되었습니다.\n",cnt_m);
@@ -54,7 +47,7 @@ int main()
   }
   else if(b=='/')
   {
-    div(a,c);
+    div_1=div(a,c);
     
     printf("연산결과: %.2lf\n",div_1);
     printf("나눗셈은 총 %d번 실행되었습니다.\n",cnt_d);
@@ -71,31 +64,28 @@ printf("종료합니다.");
 double add(double a, double b)
 {
   
-  add_1=a+b;
   cnt_a++;
-  return add_1;
+  return a+b;
 }
 double sub(double a, double b)
 {
   
-  sub_1=a-b;
   cnt_s++;
-  return sub_1;
+  return a-b;
 }
            
 double mul(double a, double b)
 {
   
-  mul_1=a*b;
+  
   cnt_m++;
-  return mul_1;
+  return a*b;
 }
 double div(double a, double b)
 {
   
-  div_1=a/b;
   cnt_d++;
-  return div_1;
+  return a/b;
 }
 
 // 연산자 
