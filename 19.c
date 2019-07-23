@@ -52,13 +52,9 @@ int main()
     printf("연산결과: %.2lf\n",div_1);
     printf("나눗셈은 총 %d번 실행되었습니다.\n",cnt_d);
   }
-    else if(a==0)
-    break;
-     
+    
   else
     printf("정확한 연산자를 입력하세요.");
-  }
-printf("종료합니다.");
 }
 
 double add(double a, double b)
