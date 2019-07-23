@@ -13,8 +13,9 @@ int cnt_a=0,cnt_s=0,cnt_m=0,cnt_d=0;
 
 int main()
 {
-  title();
-  
+ 
+    title();
+ 
   
 }
   void title(void)
