@@ -15,7 +15,7 @@ int main()
   for(i=0;i<20;i++)
   {
     printf("실수를 입력하세요. %d 번째\n",i+1);
-    scanf("%lf",&x[i]);
+    scanf("%.2lf",&x[i]);
     
     if(x[i]==0)
       break;
@@ -31,7 +31,7 @@ int main()
  
   avg=sum/a;
  
-  printf("평균은 :%lf\n",avg);
+  printf("평균은 :%.2lf\n",avg);
    //평균구하기
   
   puts("편차를 구합니다.");
@@ -39,13 +39,13 @@ int main()
   for(i=0;i<a;i++)
   {
     pyun[i]=x[i]-avg;
-    printf("%d항의 편차: %lf\n",i+1,pyun[i]);
+    printf("%d항의 편차: %.2lf\n",i+1,pyun[i]);
     
     pyun[i]*=pyun[i];
-    printf("%d항의 편차의 제곱: %lf\n",i+1,pyun[i]);
+    printf("%d항의 편차의 제곱: %.2lf\n",i+1,pyun[i]);
     
     pyun_2[i]=sqrt(pyun[i]);
-    printf("%d항의 편차제곱의 제곱근 :%lf\n",i+1,pyun[i]);
+    printf("%d항의 편차제곱의 제곱근 :%.2lf\n",i+1,pyun[i]);
   }
   //편차, 편차제곱 구하기
   
