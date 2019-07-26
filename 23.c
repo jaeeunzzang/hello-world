@@ -15,7 +15,7 @@ int main()
   for(i=0;i<20;i++)
   {
     printf("실수를 입력하세요. %d 번째\n",i+1);
-    scanf("%.2lf",&x[i]);
+    scanf("%lf",&x[i]);
     
     if(x[i]==0)
       break;
