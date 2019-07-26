@@ -4,8 +4,8 @@
 int main()
 {
   double x[20];
-  double pyun[20];
-  double pyun_2[20];
+  double pyun[20]; //편차, 편차제곱
+  double pyun_2[20]; //편차 제곱근
  
   double sum,avg,qns,pyo;
   int i;
@@ -44,7 +44,7 @@ int main()
     pyun[i]*=pyun[i];
     printf("%d항의 편차의 제곱: %.2lf\n",i+1,pyun[i]);
     
-    pyun_2[i]=sqrt(pyun[i]);
+    pyun_2[i]=sqrt(pyun[i]); //없어도 되는듯
     printf("%d항의 편차제곱의 제곱근 :%.2lf\n",i+1,pyun[i]);
   }
   //편차, 편차제곱 구하기
