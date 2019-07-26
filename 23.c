@@ -5,15 +5,16 @@ int main()
 {
   double x[20];
   double pyun[20];
+  double pyun_2[20];
  
   double sum,avg,qns,pyo;
   int i;
   int a=0;
+  puts("입력종료시 0");
   
   for(i=0;i<20;i++)
   {
     printf("실수를 입력하세요. %d 번째\n",i+1);
-    puts("입력종료시 0");
     scanf("%lf",&x[i]);
     
     if(x[i]==0)
@@ -40,8 +41,11 @@ int main()
     pyun[i]=x[i]-avg;
     printf("%d항의 편차: %lf\n",i+1,pyun[i]);
     
-    pyun[i]=pow(pyun[i],pyun[i]);
+    pyun[i]*=pyun[i];
     printf("%d항의 편차의 제곱: %lf\n",i+1,pyun[i]);
+    
+    pyun_2[i]=sqrt(pyun[i]);
+    printf("%d항의 편차제곱의 제곱근 :%lf\n",i+1,pyun[i]);
   }
   //편차, 편차제곱 구하기
   
