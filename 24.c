@@ -6,6 +6,8 @@ void draw_game(void);
 void game(void);
 int game_place(int x);
 int g_board[3][3]={0};
+char board[3][3];
+int cnt=0;
 
 
 int main()
@@ -33,7 +35,6 @@ void draw_game()
 
 void game()
 {
-  int cnt=0;
   int place;
   for(i=0;i<9;i++)
   {
@@ -58,6 +59,47 @@ void game()
     switch(x)
     {
       case 1:
-        g_board[0][0]==2;
-        
-    
+        if(cnt%2==0)
+        {
+          g_board[0][0]=2;
+          board[0][0]='X';
+        }
+        else
+        {
+          g_board[0][0]=1;
+          board[0][0]='O';
+        }
+        break;
+      case 2:
+        g_board[0][1]=2;
+        board[0][1]='X';
+        break;
+      case 3:
+        g_board[0][2]=2;
+        board[0][2]='X';
+        break;
+      case 4:
+        g_board[1][0]=2;
+        board[1][0]='X';
+        break;
+      case 5:
+        g_board[1][1]=2;
+        board[1][1]='X';
+        break;
+      case 6:
+        g_board[1][2]=2;
+        board[1][2]='X';
+        break;
+      case 7:
+        g_board[2][0]=2;
+        board[2][0]='X';
+        break;
+      case 8:
+        g_board[2][1]=2;
+        board[2][1]='X';
+        break;
+      case 9:
+        g_board[2][2]=2;
+        board[2][2]='X';
+        break;
+    }
