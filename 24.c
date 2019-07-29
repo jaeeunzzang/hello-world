@@ -71,35 +71,99 @@ void game()
         }
         break;
       case 2:
-        g_board[0][1]=2;
-        board[0][1]='X';
+        if(cnt%2==0)
+        {
+          g_board[0][1]=2;
+          board[0][1]='X';
+        }
+        else
+        {
+          g_board[0][1]=1;
+          board[0][1]='O';
+        }
         break;
       case 3:
-        g_board[0][2]=2;
-        board[0][2]='X';
+        if(cnt%2==0)
+        {
+          g_board[0][2]=2;
+          board[0][2]='X';
+        }
+        else
+        {
+          g_board[0][2]=1;
+          board[0][2]='O';
+        }
         break;
       case 4:
-        g_board[1][0]=2;
-        board[1][0]='X';
+        if(cnt%2==0)
+        {
+          g_board[1][0]=2;
+          board[1][0]='X';
+        }
+        else
+        {
+          g_board[1][0]=1;
+          board[1][0]='O';
+        }
         break;
       case 5:
-        g_board[1][1]=2;
-        board[1][1]='X';
+       if(cnt%2==0)
+        {
+          g_board[1][1]=2;
+          board[1][1]='X';
+        }
+        else
+        {
+          g_board[1][1]=1;
+          board[1][1]='O';
+        }
         break;
       case 6:
-        g_board[1][2]=2;
-        board[1][2]='X';
+       if(cnt%2==0)
+        {
+          g_board[1][2]=2;
+          board[1][2]='X';
+        }
+        else
+        {
+          g_board[1][2]=1;
+          board[1][2]='O';
+        }
         break;
       case 7:
-        g_board[2][0]=2;
-        board[2][0]='X';
+        if(cnt%2==0)
+        {
+          g_board[2][0]=2;
+          board[2][0]='X';
+        }
+        else
+        {
+          g_board[2][0]=1;
+          board[2][0]='O';
+        }
         break;
       case 8:
-        g_board[2][1]=2;
-        board[2][1]='X';
+       if(cnt%2==0)
+        {
+          g_board[2][1]=2;
+          board[2][1]='X';
+        }
+        else
+        {
+          g_board[2][1]=1;
+          board[2][1]='O';
+        }
         break;
       case 9:
-        g_board[2][2]=2;
-        board[2][2]='X';
+        if(cnt%2==0)
+        {
+          g_board[2][2]=2;
+          board[2][2]='X';
+        }
+        else
+        {
+          g_board[2][2]=1;
+          board[2][2]='O';
+        }
         break;
     }
