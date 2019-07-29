@@ -1,20 +1,24 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 
 void title(void);
-void draw_game(void);
-void game(void);
-int game_place(int x);
-int g_board[3][3]={0};
-char board[3][3];
-int cnt=0;
-
+void init_board(char board[][3]);
+void draw_board(char board[][3]);
+int game(int player char board[][3]);
 
 int main()
 {
+  char board[3][3];
+  int quit=0;
   
+  init_board(board);
   title();
-  draw_game();
+  do
+  {
+    draw_board(board);
+    
+ 
 }
 
 void title()
@@ -25,12 +29,27 @@ void title()
   return;
 }
 
-void draw_game()
+void init_board(char board[][3])
 {
-  puts("⑴⑵⑶");
-  puts("⑷⑸⑹");
-  puts("⑺⑻⑼");
-  return;
+  int x,y;
+  for(x=0;x<3;x++)
+  {
+    for(y=0;y=3;y++)
+    {
+      board[x][y]=' ';
+    }
+  }
+}
+
+void draw_board(char board[][3])
+{
+  int a;
+  for(a=0;a<3;a++)
+  {
+     puts("┌─┐┌─┐┌─┐");
+    printf("│%c│%c│%c│",&board[i][0],&board[i][1],&board[i][2]);
+    puts("└─┘└─┘└─┘");
+  }
 }
 
 void game()
@@ -54,116 +73,4 @@ void game()
     }
   }
   
-  int game_place(int x)
-  {
-    switch(x)
-    {
-      case 1:
-        if(cnt%2==0)
-        {
-          g_board[0][0]=2;
-          board[0][0]='X';
-        }
-        else
-        {
-          g_board[0][0]=1;
-          board[0][0]='O';
-        }
-        break;
-      case 2:
-        if(cnt%2==0)
-        {
-          g_board[0][1]=2;
-          board[0][1]='X';
-        }
-        else
-        {
-          g_board[0][1]=1;
-          board[0][1]='O';
-        }
-        break;
-      case 3:
-        if(cnt%2==0)
-        {
-          g_board[0][2]=2;
-          board[0][2]='X';
-        }
-        else
-        {
-          g_board[0][2]=1;
-          board[0][2]='O';
-        }
-        break;
-      case 4:
-        if(cnt%2==0)
-        {
-          g_board[1][0]=2;
-          board[1][0]='X';
-        }
-        else
-        {
-          g_board[1][0]=1;
-          board[1][0]='O';
-        }
-        break;
-      case 5:
-       if(cnt%2==0)
-        {
-          g_board[1][1]=2;
-          board[1][1]='X';
-        }
-        else
-        {
-          g_board[1][1]=1;
-          board[1][1]='O';
-        }
-        break;
-      case 6:
-       if(cnt%2==0)
-        {
-          g_board[1][2]=2;
-          board[1][2]='X';
-        }
-        else
-        {
-          g_board[1][2]=1;
-          board[1][2]='O';
-        }
-        break;
-      case 7:
-        if(cnt%2==0)
-        {
-          g_board[2][0]=2;
-          board[2][0]='X';
-        }
-        else
-        {
-          g_board[2][0]=1;
-          board[2][0]='O';
-        }
-        break;
-      case 8:
-       if(cnt%2==0)
-        {
-          g_board[2][1]=2;
-          board[2][1]='X';
-        }
-        else
-        {
-          g_board[2][1]=1;
-          board[2][1]='O';
-        }
-        break;
-      case 9:
-        if(cnt%2==0)
-        {
-          g_board[2][2]=2;
-          board[2][2]='X';
-        }
-        else
-        {
-          g_board[2][2]=1;
-          board[2][2]='O';
-        }
-        break;
-    }
+ 
