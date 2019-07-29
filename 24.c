@@ -16,8 +16,13 @@ int main()
   title();
   do
   {
+    puts("Player 1의 차례.");
     draw_board(board);
-    
+   quit=game(0,board);
+    puts("Player 2의 차례.");
+    draw_board(board);
+    quit=game(1,board);
+  }while(quit==0);
  
 }
 
@@ -47,19 +52,15 @@ void draw_board(char board[][3])
   for(a=0;a<3;a++)
   {
      puts("┌─┐┌─┐┌─┐");
-    printf("│%c│%c│%c│",&board[i][0],&board[i][1],&board[i][2]);
-    puts("└─┘└─┘└─┘");
+   printf("│%c│%c│%c│",&board[i][0],&board[i][1],&board[i][2]);
+     puts("└─┘└─┘└─┘");
   }
 }
 
-void game()
+void game(int player, char board)
 {
-  int place;
-  for(i=0;i<9;i++)
-  {
-    
-    if(cnt%2==0)
-    {
+  int x,y,com;
+      {
       puts("Second Player. 돌을 놓을 자리를 입력해주세요.");
       scanf("%d",&place);
       game_place(place);
